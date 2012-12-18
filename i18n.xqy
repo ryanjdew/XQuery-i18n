@@ -80,7 +80,7 @@ declare function load-bundle($locale as xs:string, $bundle as xs:string, $query 
 									cts:element-query(
 										xs:QName('i18n'),
 										cts:and-query((
-											cts:element-attribute-value-query(xs:QName('i18n'),xs:QName('locale'), $locale, 'exact'),
+											cts:element-attribute-value-query(xs:QName('i18n'),xs:QName('xml:lang'), $locale, 'exact'),
 											cts:element-attribute-value-query(xs:QName('i18n'),xs:QName('id'), $bundle, 'exact')											
 										))
 									),
