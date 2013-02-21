@@ -47,7 +47,7 @@ declare function bundle($locale as xs:string, $bundle as xs:string) as element(i
 This finds an i18n bundle.
 :)
 declare function bundle($locale as xs:string, $bundle as xs:string, $query as cts:query?) as element(i18n)? {
-	cts:search(/i18n[@locale eq $locale and @id eq $bundle],
+	cts:search(/i18n[@xml:lang eq $locale and @id eq $bundle],
 		$query
 	)
 };
